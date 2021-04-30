@@ -1,0 +1,34 @@
+PROGRAM myProgram
+BEGIN
+	STRING eol := "\n";
+    STRING star := "*";
+	STRING plus := "+";
+	STRING equal := "=";
+	
+	FUNCTION FLOAT myFunction (FLOAT arg1, FLOAT arg2)
+	BEGIN
+	  	FLOAT a,b,c;
+
+		a := arg1;
+		b := arg2;
+		WRITE(a);
+		WRITE(eol);
+		WRITE(b);
+		WRITE(eol);
+		c := a/b;
+		
+		RETURN c;
+	END
+
+	
+	FUNCTION INT main ()
+	BEGIN
+		FLOAT a,b,multiplyresult;
+		a := 12.0;
+		b := 3.0;
+		multiplyresult := myFunction(a,b) + myFunction(b,b);
+		WRITE(multiplyresult);
+		WRITE(eol);
+		RETURN 0;
+	END
+END
